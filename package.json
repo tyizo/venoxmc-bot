@@ -1,0 +1,22 @@
+{
+  "name": "venox",
+  "version": "1.0.0",
+  "description": "",
+  "main": "node index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Tyizo",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.10",
+    "discord.js": "^12.5.3",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "moment": "^2.29.1",
+    "re": "^0.1.4",
+    "requests": "^0.3.0"
+  }
+}
