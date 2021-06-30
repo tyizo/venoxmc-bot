@@ -4,4 +4,4 @@ How to run this ?
 
 - clone the repo
 - npm i
-- node .
+- node index.js
