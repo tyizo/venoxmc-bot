@@ -1,4 +1,5 @@
 const { MessageEmbed } = require("discord.js");
+const moment = require("moment");
 module.exports = {
   name: "user",
   run: async (client, message, args) => {
@@ -13,12 +14,16 @@ module.exports = {
       .addFields(
         {
           name: "Account Created At: ",
-          value: mentionMember.user.createdAt.toLocaleDateString("en"),
+          value: moment(mentionMember.user.createdAt).format(
+            "D/M/YYYY h:mm a "
+          ),
           inline: true,
         },
         {
           name: "Joined At: ",
-          value: mentionMember.guild.joinedAt.toLocaleDateString("en"),
+          value: moment(mentionMember.guild.joinedAt).format(
+            "D/M/YYYY h:mm a "
+          ),
           inline: true,
         },
         {
@@ -41,7 +46,7 @@ module.exports = {
         {
           name: "Boosted Since:",
           value:
-            mentionMember.premiumSince.toLocaleDateString("en") ||
+            moment(mentionMember.premiumSince).format("D/M/YYYY h:mm a ") ||
             "User dont have boost in this server",
           inline: true,
         },
